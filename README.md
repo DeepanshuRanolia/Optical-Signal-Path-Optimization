@@ -15,13 +15,6 @@ Built using **Python**, **Tkinter** for GUI, and **NetworkX** + **Matplotlib** f
 - ❌ Slot freeing and full graph reset
 - 🔍 Slot usage visualization with edge color coding
 
----
-
-## 🖼️ Demo Screenshot
-
-![WDM Slot Allocation GUI](path/to/screenshot.png)
-
-> Replace `path/to/screenshot.png` with your actual image path (e.g., `assets/demo.png`)
 
 ---
 ##💡 How It Works
