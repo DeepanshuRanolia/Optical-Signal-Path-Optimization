@@ -1,72 +1,42 @@
-##🔌 Optical Signal Optimization using WDM Slot Allocation
+# 🔌 Optical Signal Optimization using WDM Slot Allocation
 
-This project provides a graphical simulation for Wavelength Division Multiplexing (WDM)-based optical networks. It enables dynamic graph creation, shortest path calculation using Dijkstra's and A* algorithms, and spectrum slot allocation over multiple wavelengths.
+This project provides a graphical simulation for **Wavelength Division Multiplexing (WDM)**-based optical networks. It enables dynamic graph creation, shortest path calculation using **Dijkstra's** and **A\*** algorithms, and **spectrum slot allocation** over multiple wavelengths.
 
-Built using Python, Tkinter for GUI, and NetworkX + Matplotlib for graph visualization.
+Built using **Python**, **Tkinter** for GUI, and **NetworkX** + **Matplotlib** for graph visualization.
 
-🚀 Features
-📈 Visual graph builder (nodes, weighted edges)
+---
 
-🧠 Pathfinding using Dijkstra's and A* algorithms
+## 🚀 Features
 
-🌐 Slot allocation using contiguous and non-contiguous spectrum slots
+- 📈 Visual graph builder (nodes, weighted edges)
+- 🧠 Pathfinding using **Dijkstra's** and **A\*** algorithms
+- 🌐 Slot allocation using contiguous and non-contiguous spectrum slots
+- 🌈 Supports multiple **wavelengths** (default: 4)
+- ❌ Slot freeing and full graph reset
+- 🔍 Slot usage visualization with edge color coding
 
-🌈 Supports multiple wavelengths (default: 4)
+---
 
-❌ Slot freeing and full graph reset
+## 🖼️ Demo Screenshot
 
-🔍 Slot usage visualization with edge color coding
+![WDM Slot Allocation GUI](path/to/screenshot.png)
 
-🖼️ Demo Screenshot
+> Replace `path/to/screenshot.png` with your actual image path (e.g., `assets/demo.png`)
 
-🧰 Installation
-Clone the repository
+---
+##💡 How It Works
 
-bash
-Copy
-Edit
-git clone https://github.com/YourUsername/optical-wdm-slot-allocation.git
-cd optical-wdm-slot-allocation
-Create virtual environment (optional but recommended)
+Launch the GUI.
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install required packages
+Add nodes and edges (node1 node2 weight).
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-📦 Requirements
-Make sure the following packages are installed:
+Set source, destination, slots required, and wavelength index.
 
-nginx
-Copy
-Edit
-tk
-matplotlib
-networkx
-You can install them manually if requirements.txt is missing:
+Run Dijkstra and A* pathfinding.
 
-bash
-Copy
-Edit
-pip install matplotlib networkx
-💡 How It Works
-Launch the app.
+Allocate slots – contiguous preferred (can be toggled).
 
-Add nodes and edges (format: u v weight).
-
-Enter source, destination, slots required, and wavelength index.
-
-Run both Dijkstra and A* algorithms for path finding.
-
-Allocate slots — contiguous preferred by default (toggle available).
-
-Visual feedback with edge color coding based on slot utilization:
+View edge color coding:
 
 🔵 Blue → unused
 
@@ -76,30 +46,20 @@ Visual feedback with edge color coding based on slot utilization:
 
 🔴 Red → fully used
 
-You can free slots or reset the graph anytime.
+Options to free slots or reset the graph.
 
-⚙️ Configuration
-Spectrum Slots: 80 (default)
+---
+##📊 Algorithms Used
 
-Wavelengths: 4
+Dijkstra's Algorithm: Classic shortest path finder for weighted graphs.
 
-Adjustable from constants in the code:
+A* Search Algorithm: Heuristic-driven pathfinding.
 
-python
-Copy
-Edit
-NUM_SPECTRUM_SLOTS = 80
-NUM_WAVELENGTHS = 4
-📊 Algorithms Used
-Dijkstra's Algorithm – for shortest weighted path.
+Each run displays:
 
-A* Search Algorithm – with a hash-based heuristic.
+Path found
 
-📚 References
-WDM Technology – Wikipedia
+Time taken
 
-NetworkX Documentation
+Whether slot allocation was successful
 
-Dijkstra’s Algorithm – GeeksforGeeks
-
-A* Algorithm – GeeksforGeeks
